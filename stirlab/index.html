@@ -9,7 +9,27 @@
   </head>
   <body>
   <h1>Stirlab video server speedtest</h1>
-  <div id="startStopBtn" onclick="startStop()"></div>
+  <div id="buttons-container">
+    <select id="number-of-tests" class="select-style">
+      <optgroup>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </optgroup>
+    </select>
+    <span id="tests-at">tests at</span>
+    <select id="test-interval" class="select-style">
+      <optgroup>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+      </optgroup>
+    </select>
+    <span id="minute-intervals">minute intervals</span>
+    <div id="startStopBtn" onclick="startStop()"></div>
+  </div>
   <div id="test">
     <div class="testGroup">
       <div class="testArea">

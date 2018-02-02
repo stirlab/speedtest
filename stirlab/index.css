@@ -10,9 +10,12 @@ body{
 h1{
   color:#404040;
 }
+
+#buttons-container {
+  margin:0 auto;
+}
 #startStopBtn{
   display:inline-block;
-  margin:0 auto;
   color:#6060AA;
   background-color:rgba(0,0,0,0);
   border:0.15em solid #6060FF;
@@ -37,6 +40,28 @@ h1{
 }
 #startStopBtn.running:before{
   content:"Abort";
+}
+.select-style {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+#minute-intervals {
+  margin-right: 1em;
 }
 #test{
   margin-top:2em;

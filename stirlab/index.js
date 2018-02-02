@@ -50,6 +50,8 @@ function startStop(){
 		w=null;
 		data=null;
 		I("startStopBtn").className="";
+		I("test-running-container").className="hidden";
+		I("options-container").className="";
 		initUI();
 	}else{
 		//test is not running, begin
@@ -62,12 +64,16 @@ function startStop(){
     };
 		w.postMessage('start ' + JSON.stringify(params)); //Add optional parameters as a JSON object to this command
 		I("startStopBtn").className="running";
+		I("options-container").className="hidden";
+		I("test-running-container").className="pulsate";
 		w.onmessage=function(e){
 			data=e.data.split(';');
 			var status=Number(data[0]);
 			if(status>=4){
 				//test completed
 				I("startStopBtn").className="";
+        I("test-running-container").className="hidden";
+        I("options-container").className="";
 				w=null;
 				updateUI(true);
 			}
